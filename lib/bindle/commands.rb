@@ -22,7 +22,8 @@ module Bindle
     end
 
     def self.help(command = self.to_s)
-      puts "Usage: bindle #{command.demodulize.underscore} COMMAND [args] [options]"
+      puts "Usage:"
+      puts "  bindle #{command.demodulize.underscore} COMMAND [args] [options]"
       puts
       puts "General options:"
       puts "  -h, [--help]     # Print generator's options and usage"

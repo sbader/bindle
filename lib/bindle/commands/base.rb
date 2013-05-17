@@ -29,7 +29,7 @@ module Bindle
         end
 
         def banner
-          banner = "bindle #{display_name}"
+          banner = "bindle #{display_name}\n"
           banner << " #{self.arguments.map(&:usage).join(' ')}" if self.arguments.length > 0
           banner << " [options]"
         end
