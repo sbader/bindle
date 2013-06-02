@@ -65,8 +65,11 @@ module Bindle
         _bundle_command = Gem.bin_path('bundler', 'bundle')
 
         require 'bundler'
-        Bundler.with_clean_env do
-          print `"#{Gem.ruby}" "#{_bundle_command}" install`
+
+        if !options[:pretend]
+          Bundler.with_clean_env do
+            print `"#{Gem.ruby}" "#{_bundle_command}" install --binstubs`
+          end
         end
       end
 

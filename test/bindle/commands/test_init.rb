@@ -20,19 +20,13 @@ module Bindle
         end
 
         files = %w( Vagrantfile
-                    Veeweefile
                     Cheffile
+                    Gemfile
                     .librarian
                     .librarian/chef/config
                     chef
                     chef/roles
                     chef/roles/base.rb
-                    chef/definitions
-                    chef/definitions/base/base.sh
-                    chef/definitions/base/chef.sh
-                    chef/definitions/base/cleanup.sh
-                    chef/definitions/base/definition.rb
-                    chef/definitions/base/zerodisk.sh
                     chef/README.md )
 
         files.each do |file|
