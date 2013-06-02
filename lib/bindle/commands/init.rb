@@ -25,10 +25,6 @@ module Bindle
         template "Vagrantfile"
       end
 
-      def veeweefile
-        template "Veeweefile"
-      end
-
       def cheffile
         template "Cheffile"
       end
@@ -46,7 +42,6 @@ module Bindle
 
         inside "chef" do
           directory "roles"
-          directory "definitions"
 
           template "README.md"
         end
