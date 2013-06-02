@@ -1,4 +1,5 @@
 require 'bindle/version'
+require 'active_support/core_ext/string'
 
 if ['--version', '-v'].include?(ARGV.first)
   puts "Bindle #{Bindle::VERSION::STRING}"
@@ -14,8 +15,6 @@ aliases = {
   "b" => "build",
   "g" => "generate"
 }
-
-require 'active_support/core_ext/string'
 
 help_message = <<-EOT.strip_heredoc
 Usage:
