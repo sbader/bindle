@@ -2,7 +2,7 @@ require 'fileutils'
 require 'bindle/commands/base'
 require 'librarian/action/resolve'
 require 'librarian/action/install'
-require 'librarian/chef'
+require 'librarian-chef'
 
 module Bindle
   module Commands
