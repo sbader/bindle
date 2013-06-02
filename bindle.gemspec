@@ -28,6 +28,5 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency "rdoc"
   gem.add_development_dependency "rubygems-tasks"
   gem.add_development_dependency "pry"
-  gem.add_development_dependency "plymouth"
   gem.add_development_dependency "m", "~> 1.3.1"
 end
