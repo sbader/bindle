@@ -41,14 +41,6 @@ module Bindle
             .join(" ")
         end
       end
-
-      def self.inherited(base)
-        super
-
-        if base.name && base.name !~ /Base$/
-          Bindle::Commands.subclasses << base
-        end
-      end
     end
   end
 end

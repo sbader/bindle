@@ -60,13 +60,6 @@ class MiniTest::Unit::TestCase
     stream_io.reopen(origin_stream)
   end
 
-  # def run_command(args = [], config = {})
-  #   capture(:stdout) do
-  #     args += ['--pretend'] unless args.include? '--real'
-  #     self.command_class.start(args, config.reverse_merge(destination_root: destination_root))
-  #   end
-  # end
-
   def destination_root
     tmp_path 'test_tmp'
   end
