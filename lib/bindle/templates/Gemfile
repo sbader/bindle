@@ -1,0 +1,8 @@
+source "https://rubygems.org"
+
+group :development do
+  gem "librarian-chef"
+  gem "knife-solo", "~> 0.3.0.pre4"
+  gem "knife-ec2"
+end
+

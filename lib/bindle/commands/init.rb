@@ -33,6 +33,10 @@ module Bindle
         template "Cheffile"
       end
 
+      def gemfile
+        template "Gemfile"
+      end
+
       def librarian
         directory "librarian", ".librarian"
       end
@@ -56,6 +60,18 @@ module Bindle
             /chef/packages
             /.vagrant
           IGNORE
+        end
+      end
+
+      # From railties: github.com/rails/rails/blob/f96478369e/railties/lib/rails/generators/app_base.rb#L253
+      def bundle_install
+        say_status :running, "bundle install"
+
+        _bundle_command = Gem.bin_path('bundler', 'bundle')
+
+        require 'bundler'
+        Bundler.with_clean_env do
+          print `"#{Gem.ruby}" "#{_bundle_command}" install`
         end
       end
 
