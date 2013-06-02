@@ -16,6 +16,11 @@ module Bindle
         end
       end
 
+      def kniferb
+        empty_directory ".chef"
+        template "knife.rb", ".chef/knife.rb"
+      end
+
       def vagrantfile
         template "Vagrantfile"
       end
